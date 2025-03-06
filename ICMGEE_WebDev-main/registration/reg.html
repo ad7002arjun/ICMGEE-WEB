@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Fee Details - Melange Publications</title>
+    <style>
+        
+        :root {
+            --primary-color: #fde68a;
+            --secondary-color: #fde68a;
+            --bg-light: #f9fafb;
+            --text-dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('/assets/yellowbackground.jpg');
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .Arjun_container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .content {
+            padding: 1.5rem;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+
+        .fee-table th, 
+        .fee-table td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .fee-table th {
+            background-color: #f0f4f8;
+        }
+
+        .fee-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .fee-table tr:hover {
+            background-color: #f0f4f8;
+        }
+
+        .note {
+            background-color: #fffbea;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bank-details, 
+        .contact-info {
+            background-color: #f0f4f8;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .copy-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1rem 0.5rem;
+            }
+
+            .fee-table {
+                font-size: 0.9rem;
+            }
+        }
+
+
+
+
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+#home {
+    height: 100vh;
+    background: url('https://files.auroville.org/auroville-org/d643f5ff-593f-4ed0-a863-7e3344029e37.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+#home .title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#home .subheading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#home .date, #home .venue, #home .location, #home .contact, #home .website {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#home .venue {
+    font-weight: bold;
+}
+
+#home p a {
+    color: #ffdd57;
+    text-decoration: none;
+}
+
+#home p a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ffdd57;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+button.register {
+    background-color: #fff;
+    color: #4caf50;
+}
+
+button.register:hover {
+    background-color: #f1f1f1;
+}
+
+button.login {
+    background-color: #fff;
+    color: #000;
+}
+
+button.login:hover {
+    background-color: #f1f1f1;
+}
+
+.images {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    margin: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #ffdd57;
+}
+
+.image-container p strong {
+    font-size: 1em;
+    color: #fff;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about, #speakers, #schedule, #contact {
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+}
+
+
+
+
+
+
+/* 
+menu bar */
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  .akshat_navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    z-index: 1000;
+  }
+  .akshat_logo {
+    color: #FFD700;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .akshat_nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .akshat_nav-links li {
+    display: inline;
+  }
+  .akshat_nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+  }
+  .akshat_nav-links a:hover {
+    color: #FFD700;
+  }
+  .akshat_menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  
+  }
+  @media (max-width: 768px) {
+    .akshat_nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+    .akshat_nav-links.active {
+        display: flex;
+    }
+    .akshat_menu-toggle {
+        display: block;
+    }
+  }
+    </style>
+</head>
+<body>
+
+    <!-- menu bar -->
+<nav class="akshat_navbar">
+    <div class="akshat_logo">ICAIIR-5.0</div>
+    <button class="akshat_menu-toggle" onclick="toggleMenu()">&#9776;</button>
+    <ul class="akshat_nav-links" id="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about/about.html">About</a></li>
+        <li><a href="/call for papers/shan.html">Publication</a></li>
+        <li><a href="#" style="color: rgb(245, 245, 120) !important;">Registrations</a></li>
+        <li><a href="/contact us/contactus.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+    <div class="Arjun_container">
+        <div class="card">
+            <div class="header">
+                <h1>Conference Fee (Excluding Publication Fee)</h1>
+            </div>
+
+            <div class="content">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Research Scholars/Students</td>
+                            <td>2000 INR</td>
+                        </tr>
+                        <tr>
+                            <td>Academicians</td>
+                            <td>2500 INR</td>
+                        </tr>
+                        <tr>
+                            <td>Industry and Others</td>
+                            <td>3000 INR</td>
+                        </tr>
+                        <tr>
+                            <td>Foreign Authors</td>
+                            <td>75 USD</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>Note:</strong> Scopus and WoS Publication charges will depend upon norms of the journals.
+                </div>
+
+                <div class="bank-details">
+                    <h2 class="section-title">Bank Details</h2>
+                    <div id="bankDetails">
+                        <p><strong>Bank A/C Name:</strong> MELANGE PUBLICATIONS</p>
+                        <p><strong>Bank A/C No:</strong> 736805000791</p>
+                        <p><strong>Bank Name:</strong> ICICI BANK</p>
+                        <p><strong>Branch:</strong> VILLIANUR, PUDUCHERRY</p>
+                        <p><strong>IFSC Code:</strong> ICIC0000368</p>
+                        <p><strong>SWIFT Code:</strong> ICICINBBCTS</p>
+                        <button class="copy-btn" onclick="copyBankDetails()">Copy Bank Details</button>
+                    </div>
+                </div>
+
+    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyBankDetails() {
+            const bankDetails = document.getElementById('bankDetails');
+            const textToCopy = Array.from(bankDetails.querySelectorAll('p'))
+                .map(p => p.textContent)
+                .join('\n');
+
+            
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = textToCopy;
+            document.body.appendChild(tempTextArea);
+            
+            tempTextArea.select();
+            document.execCommand('copy');
+            
+            document.body.removeChild(tempTextArea);
+
+            alert('Bank details copied to clipboard!');
+        }
+
+        document.querySelectorAll('.fee-table tr').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.backgroundColor = '#f0f4f8';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.style.backgroundColor = '';
+            });
+        });
+    </script>
+</body>
+</html>
